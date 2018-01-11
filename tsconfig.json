@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "declaration":true,
+      "outDir": "./ts_out",
+      "removeComments": true,
+      "moduleResolution":"node"
+    },
+    "include": ["ts/*","ts/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+  }
+  

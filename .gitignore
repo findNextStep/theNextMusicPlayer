@@ -1,0 +1,7 @@
+node_modules
+ts_out
+.vscode
+*.7z
+*.zip
+test*
+npm-debug.log

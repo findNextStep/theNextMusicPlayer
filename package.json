@@ -1,0 +1,32 @@
+{
+  "name": "the-next-music-player",
+  "version": "1.0.0",
+  "description": "a simple music player by electron",
+  "main": "./ts_out/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/findNextStep/theNextMusicPlayer.git"
+  },
+  "keywords": [
+    "electron",
+    "music"
+  ],
+  "author": "the_next",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/findNextStep/theNextMusicPlayer/issues"
+  },
+  "homepage": "https://github.com/findNextStep/theNextMusicPlayer#readme",
+  "dependencies": {
+    "typescript": "^2.1.0",
+    "fs": "0.0.1-security",
+    "electron": "^1.7.9"
+  },
+  "devDependencies": {
+    "typescript": "^2.2.2",
+    "tslint": "^5.0.0"
+  }
+}

@@ -39,16 +39,37 @@ export interface ItheNextMusicPlayerBase {
 }
 export abstract class TheNextMusicPlayerBase implements ItheNextMusicPlayerBase {
     protected switchFun: (name: string) => void;
+    private player: HTMLAudioElement;
     constructor() {
+        this.player = document.createElement("audio");
         this.switchFun = (name: string) => {
             return;
         };
+        this.player.onended = () => {
+            this.switchFun(this.next());
+        };
     }
-    public abstract play(name?: string);
-    public abstract pause();
-    public abstract stop();
-    public abstract next();
-    public abstract previous();
+    public play(name?: string) {
+        this.player.play();
+    }
+    public pause() {
+        this.player.pause();
+    }
+    public stop() {
+        this.pause();
+        this.player.currentTime = 0;
+    }
+    /**
+     * 设置播放音乐的路径
+     *
+     * @memberof TheNextMusicPlayerBase
+     */
+    protected set musicPath(path: string) {
+        this.player.src = path;
+    }
+
+    public abstract next(): string;
+    public abstract previous(): string;
     /**
      * 获取播放形式
      */

@@ -9,6 +9,6 @@ export class TheNextMusicPlayerWindow extends TheNextToolsBase {
                 this.mainWindow.webContents.openDevTools({ mode: "detach" });
             }
         });
-        this.mainWindow.loadURL("file://" + __dirname + "/../../../index/empty.html");
+        this.mainWindow.loadURL("file://" + __dirname + "/../../../index/player.html");
     }
 }

@@ -4,6 +4,7 @@
   "description": "a simple music player by electron",
   "main": "./ts_out/main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

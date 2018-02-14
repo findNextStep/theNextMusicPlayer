@@ -1,9 +1,13 @@
 import { TheNextMusicPlayerBase } from "./theNextMusicPlayerBase";
 export class TheNextSingleCycle extends TheNextMusicPlayerBase {
     private musicFile: string;
-    constructor(name?: string) {
+    constructor(path?: string, name?: string) {
         super();
-        this.musicPath = "D:\\the_next-app\\theNextMusicPlayer\\test";
+        if (path != null) {
+            this.musicPath = path;
+        } else {
+            this.musicPath = "D:\\the_next-app\\theNextMusicPlayer\\test";
+        }
         this.music = "test.mp3";
         this.musicFile = "test.mp3";
         if (name != null) {

@@ -1,6 +1,6 @@
-import { TheNextToolsBase } from "./theNextToolsBase";
+import { TheNextEmptyBase } from "./theNextEmptyBase";
 
-export class TheNextMusicPlayerWindow extends TheNextToolsBase {
+export class TheNextMusicPlayerWindow extends TheNextEmptyBase {
     constructor() {
         super();
         this.registerOneShortcut("ctrl+e", () => {
@@ -9,6 +9,5 @@ export class TheNextMusicPlayerWindow extends TheNextToolsBase {
                 this.mainWindow.webContents.openDevTools({ mode: "detach" });
             }
         });
-        this.mainWindow.loadURL("file://" + __dirname + "/../../../index/player.html");
     }
 }

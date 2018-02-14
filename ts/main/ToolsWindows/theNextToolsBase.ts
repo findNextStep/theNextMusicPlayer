@@ -35,8 +35,9 @@ export abstract class TheNextToolsBase {
       frame: false,
       icon: icoPath,
       resizable: false,
+      show: false,
       // 消解窗口边界
-      transparent: true
+      transparent: true,
     });
     this.mainWindow.on("closed", () => {
       this.close();
@@ -45,6 +46,10 @@ export abstract class TheNextToolsBase {
     this.mainWindow.on("blur", () => {
       console.log("blur");
       this.UnregisterAllShortcut();
+    });
+    this.mainWindow.once("ready-to-show", () => {
+      console.log("show on base");
+      this.mainWindow.show();
     });
     this.mainWindow.on("focus", () => {
       const win = BrowserWindow.getFocusedWindow();
